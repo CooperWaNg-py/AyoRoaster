@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Scroller</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    #message {
+      display: none;
+      position: fixed;
+      bottom: 50%;
+      white-space: nowrap;
+      font-size: 24px;
+      color: #ff6347;
+      animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        left: 100%;
+      }
+      100% {
+        left: -100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>ayo roaster</h1>
+  <button onclick="showMessage()">roast ayo</button>
+  <div id="message">ayo got roasted</div>
+
+  <script>
+    function showMessage() {
+      const message = document.getElementById("message");
+      message.style.display = "block";
+      setTimeout(() => {
+        message.style.display = "none";
+      }, 10000); // Hide message after 10 seconds
+    }
+  </script>
+</body>
+</html>
